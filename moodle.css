@@ -17631,7 +17631,7 @@ table.boxwidthwide {
   max-width: 100%;
   padding: 0 4% 2em;
 }
-#page-login-index .loginpanel h2 {
+#page-login-index .loginpanel h2 {  /* sebasz */
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -17639,26 +17639,39 @@ table.boxwidthwide {
   -webkit-background-size: contain;
           background-size: contain;
   margin: 0;
+  margin-bottom: 0.7em;
+  font-size: 4.8vh;
 }
-#page-login-index .loginbox {
+#page-login-index .loginbox { /*sebasz*/
   float: none;
   padding: 1em 4%;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
+  /*background-color: rgba(255, 255, 255, 0.9);*/
   margin: 2em auto;
+  margin-top: 5em;
   max-width: 30em;
   left: 0;
 }
-#page-login-index #loginbtn {
+#page-login-index #loginbtn { /*sebasz*/
   display: block;
   width: 100%;
   margin: 1em 0;
+  margin-top: 2em;
+  background-color: #ad2f2f;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  -webkit-transition: background-color 0.4s ease-in-out; /* Safari */
+    transition: background-color 0.4s ease-in-out;
 }
-#page-login-index .signuppanel > h2 {
+#page-login-index #loginbtn:hover { /*sebasz*/
+  background-color: #c53030;
+}
+#page-login-index .signuppanel > h2, #page-login-index header {  /* sebasz */
   display: none;
 }
-#page-login-index #moodle-footer {
-  margin-top: 0;
+#page-login-index #moodle-footer { /* sebasz */
+ margin-top: 200px;
 }
 .full-width {
   width: 100vw;
@@ -18245,6 +18258,10 @@ fieldset[disabled] #page-site-index .section-modchooser-link .section-modchooser
   background-position: center top;
   -webkit-background-size: cover;
           background-size: cover;
+
+}
+#page-login-index, #page-login-index #page { /* sebasz */
+  background-color: #eeeeee !important;
 }
 #snap-home.logo {
   display: inline-block;
@@ -23408,6 +23425,7 @@ fieldset[disabled] a#changenumsections .reduce-sections {
 }
 .fixy #fixy-close {
   color: #fff;
+  padding: 0 !important;
 }
 .fixy h2 {
   font-weight: 500;
@@ -23417,11 +23435,12 @@ fieldset[disabled] a#changenumsections .reduce-sections {
   margin-bottom: 1em;
   font-size: 1rem;
 }
+ /*  sebasz
 @media only screen and (min-width: 768px) {
   .fixy #fixy-close {
-    margin-top: 1rem;
+  margin-top: 1rem; 
   }
-}
+}*/
 .notloggedin header .snap-login-button {
   margin-right: 4%;
 }
@@ -23436,8 +23455,9 @@ fieldset[disabled] a#changenumsections .reduce-sections {
   -webkit-animation-duration: 0.3s;
           animation-duration: 0.3s;
 }
-#fixy-user {
-  padding: 1em 4%;
+#fixy-user {  /*sebasz*/
+  /*padding: 1em 4%;*/
+  padding: 0.67em 0 0.5em 4%
 }
 #fixy-user:before,
 #fixy-user:after {
@@ -23458,17 +23478,28 @@ fieldset[disabled] a#changenumsections .reduce-sections {
 #fixy-user a,
 #fixy-user a .h1 {
   color: white;
+  font-size: 0.94em;
 }
-#fixy-user .userpicture {
-  float: left;
-  margin-right: 2%;
+#fixy-user .userpicture {   /* sebasz */
+  float: right;
+  margin-right: 3.5%;
+  max-width: 2em;
 }
-#fixy-user #fixy-user-details {
-  float: left;
+#fixy-user #fixy-user-details { /* sebasz */
+  float: right;
+  margin-right: 12px;
+  text-align: right;
+  position: relative;
+  top:-7px;
 }
-#fixy-user #fixy-logout {
+#fixy-user #fixy-logout { /* sebasz */
   display: block;
   line-height: 0;
+  font-size: 0.66em;
+  color: #e3cece;
+}
+#fixy-user #fixy-logout:hover { /* sebasz */
+  color: white;
 }
 #fixy-content {
   padding: 0 2%;
@@ -23549,23 +23580,34 @@ fieldset[disabled] a#changenumsections .reduce-sections {
 .fixy input::placeholder {
   letter-spacing: 0.1em;
 }
-.callstoaction{
-  margin-left: 21.531px;
+.callstoaction{ /*sebasz*/
+  margin-left: 3%;
 }
+
+@media only screen and (min-width: 480px) { /*sebasz*/
+  #fixy-my-courses {
+  
+    padding-left: 3% !important;
+ 
+  }
+  
+}
+
 @media only screen and (min-width: 1200px) {
   #fixy-my-courses {
     position: relative;
     min-height: 1px;
-    padding-left: 3% !important;
     padding-right: 15px;
     margin-bottom: 2em;
+    
   }
-  .callstoaction {
+  .callstoaction { /*  sebasz */
     position: relative;
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 2em;
+    margin: 0;
     
   }
   .callstoaction section {
@@ -23576,13 +23618,13 @@ fieldset[disabled] a#changenumsections .reduce-sections {
 }
 @media only screen and (min-width: 1200px) and (min-width: 1200px) {
   #fixy-my-courses {
-    padding-left: 3% !important;
     float: left;
     width: 75%;
   }
 }
 @media only screen and (min-width: 1200px) and (min-width: 1200px) {
   .callstoaction {
+    
     float: left;
     width: 25%;
   }
@@ -23590,7 +23632,6 @@ fieldset[disabled] a#changenumsections .reduce-sections {
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
   .callstoaction {
     
-    margin-left: 35.734px;
     -webkit-column-count: 2;
        -moz-column-count: 2;
             column-count: 2;
@@ -25071,3 +25112,4 @@ img.iconhelp:hover {
   background-color: black;
   
 }
+

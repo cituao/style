@@ -5436,10 +5436,12 @@ div.groupmanagementtable .members select {
 .page-context-header:after {
   clear: both;
 }
-.page-context-header .page-header-image {
-  display: table-cell;
+.page-context-header .page-header-image { /* profile */
+  display: block;
   vertical-align: top;
   padding-right: 10px;
+  margin: 0 auto;
+  width: 126px;
 }
 .page-context-header .page-header-headings {
   display: table-cell;
@@ -6820,7 +6822,7 @@ h6,
   font-family: "Roboto", "Fira Sans", "Segoe UI", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   line-height: 1.5;
-  color: #565656;
+  color: #2d2a2a;
 }
 h1 small,
 h2 small,
@@ -6897,28 +6899,28 @@ h6 .small,
   font-size: 75%;
 }
 h1,
-.h1 {
-  font-size: 54px;
+.h1 { /*sebasz*/
+  font-size: 44px; /*54px*/
 }
 h2,
 .h2 {
-  font-size: 46px;
+  font-size: 36px;/*46px*/
 }
 h3,
 .h3 {
-  font-size: 42px;
+  font-size: 32px;/*42px*/
 }
 h4,
 .h4 {
-  font-size: 36px;
+  font-size: 26px;/*36px*/
 }
 h5,
 .h5 {
-  font-size: 29px;
+  font-size: 22px;/*29px*/
 }
 h6,
 .h6 {
-  font-size: 24px;
+  font-size: 20px;/*24px*/
 }
 p {
   margin: 0 0 14px;
@@ -12962,10 +12964,19 @@ img.hide {
 .block.hidden .content {
   display: none;
 }
-.block .content .userpicture {
-  width: 16px;
-  height: 16px;
-  margin-right: 6px;
+.block .content .userpicture { /*sebasz*/
+  width: 50px;
+  height: 50px;
+  margin-right: 12px;
+  position: relative;
+  top: 14px;
+}
+.block_online_users .content .info{
+  
+  font-size: 14px;
+  margin-top: -18px;
+  margin-bottom: 6px;
+  text-align: left;
 }
 .block .content .list li.listentry {
   clear: both;
@@ -17362,8 +17373,10 @@ fieldset[disabled] .yui-button button.active {
     position: relative;
   }
 }
-.block .header .title h2 {
-  font-size: 29px;
+.block .header .title h2 { /*sebasz*/
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 14px !important;
 }
 .block h3 {
   font-size: 24px;
@@ -17436,9 +17449,9 @@ a.skip-block {
   margin-top: 2em;
 }
 .block,
-.block-region .block {
-  margin: 0 auto 1em;
-  padding: 0 2%;
+.block-region .block { /* sebasz  dashboard*/
+  /*margin: 0 auto 1em;
+  padding: 0 2%;*/
   -webkit-box-shadow: none;
           box-shadow: none;
   border: 0;
@@ -17595,6 +17608,7 @@ img.spacer,
   padding: 0;
   margin: 0 auto;
 }
+
 .section.img-text:before,
 .section.img-text:after {
   content: " ";
@@ -17894,10 +17908,11 @@ h1 {
   font-weight: 100;
   margin: 0.25em 0;
 }
-#page-header h1 {
+#page-header h1 { /*sebasz */
   margin-top: 0;
   line-height: 1;
   font-weight: 100;
+  font-size: 32px;
 }
 #region-main textarea {
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -18510,6 +18525,77 @@ footer #moodle-footer
 }
 aside {
   position: relative;
+}
+
+#page-my-index{  /* sebasz */
+  background-color: #eeeeee;
+}
+ #region-main, #moodle-blocks{ /* sebasz  modify with context if required */
+  max-width: none;
+  
+}
+
+#page-my-index #block-region-content, #moodle-blocks .block{ /* sebasz  dashboard*/
+      background-color: white;
+    box-shadow: #dadada 0px 1px 1px;
+    padding: 18px 24px 32px 24px;
+    border: #e6e6e6 1px solid;
+    margin-top: 15px;
+  margin-bottom: 0px;
+  max-width: none;
+}
+
+#moodle-blocks .block_calendar_month{ /* sebasz  dashboard*/
+  box-shadow: #dadada 0px 0px 1px;
+  border-bottom: none;
+  padding-left: 0;
+  padding-right: 0px;
+  padding-top: 0 !important;
+}
+#moodle-blocks .block_calendar_upcoming{/* sebasz  dashboard*/
+  box-shadow: none;
+  border: #e6e6e6 1px solid;
+  border-top: none;
+  box-shadow: #dadada 0px 1px 1px;
+  padding: 0;
+  padding-bottom: 20px;
+  margin-top: 0;
+  background-color: #FFC246;
+  
+}
+
+#moodle-blocks .block_calendar_month .header{ /* sebasz  dashboard*/
+  background-color: #292929;
+}
+#moodle-blocks .block_calendar_month .header .title h2, #moodle-blocks .block_calendar_upcoming .header .title h2{ /* sebasz  dashboard*/
+  color: white;
+  padding-left: 24px;
+  padding-top: 0;
+}
+#moodle-blocks .block_calendar_month .header .title h2{
+  padding-top: 18px;
+}
+#moodle-blocks .block_calendar_upcoming .header {/* sebasz  dashboard*/
+  background-color: #292929;
+ 
+}
+#moodle-blocks .block_calendar_upcoming .header .title h2{/* sebasz  dashboard*/
+  font-weight: normal;
+  font-size: 18px;
+}
+#moodle-blocks .block_calendar_upcoming .content, #moodle-blocks .block_calendar_month .content{
+    padding-left: 24px;
+  padding-right: 24px;
+}
+#moodle-blocks .block_calendar_month{/* sebasz  dashboard*/
+  min-height: 496px;
+}
+
+#block_calendar_month block{
+  min-height: 442px;
+}
+.minicalendar{
+  margin-top:45px;
 }
 /***************
 THE HEADER DOM LOOKS LIKE THIS :
@@ -19391,8 +19477,12 @@ li.calendar_event_user:before {
 .block .minicalendar td.hasevent > a {
   color: #fff;
 }
-.block .minicalendar td.today > a {
-  border: 1px solid #dadada;
+.block .minicalendar td.today > a { /*sebasz*/
+  /*border: 1px solid #dadada;*/
+  border-radius: 50%;
+  font-size: 16px;
+}
+  
 }
 .calendar-event-panel {
   border: 0 !important;
@@ -21648,9 +21738,13 @@ section#region-main
             ul.somestringfromtheformat e.g  topics/weeks etc
 
  ****************************/
-.singlebutton {
+.singlebutton { /* sebasz  dashboard*/
+  float:right;
   margin: 0.5em 0;
   text-align: center;
+  position: relative;
+  top:-39px;
+
 }
 .format-topics #page-mast .singlebutton,
 .format-weeks #page-mast .singlebutton {

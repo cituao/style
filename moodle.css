@@ -5288,13 +5288,13 @@ body.path-admin-roles .userselector {
   margin-left: auto;
   margin-right: auto;
 }
-#page-user-profile .node_category h3 {
-  font-weight: 300;
+#page-user-profile .node_category h3 { /*sebasz profile*/
+  font-weight: bold;
   line-height: 1.5;
-  color: #565656;
+  color: #150b0b;
   margin-top: 14px;
   margin-bottom: 14px;
-  font-size: 29px;
+  font-size: 20px;
   font-family: "Roboto", "Fira Sans", "Segoe UI", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #page-user-profile .node_category h3 small,
@@ -5405,13 +5405,22 @@ div.groupmanagementtable .members select {
   margin: 0;
 }
 @media (min-width: 992px) {
-  .userprofile .profile_tree {
-    -webkit-column-count: 2;
+  .userprofile .profile_tree { /*sebasz profile*/
+    /*-webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
     -webkit-column-gap: 30px;
     -moz-column-gap: 30px;
-    column-gap: 30px;
+    column-gap: 30px;*/
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: stretch;
+  }
+  .userprofile .profile_tree section{ /*sebasz profile*/
+    width: 48%;
+    margin: 9px;
   }
 }
 #page-user-profile .node_category li,
@@ -5441,7 +5450,15 @@ div.groupmanagementtable .members select {
   vertical-align: top;
   padding-right: 10px;
   margin: 0 auto;
-  width: 126px;
+  width: 94px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+#page-user-profile .page-header-headings{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }
 .page-context-header .page-header-headings {
   display: table-cell;
@@ -5449,6 +5466,7 @@ div.groupmanagementtable .members select {
 }
 .page-context-header .page-header-headings h1 {
   margin: 0;
+  font-size: 30px;
 }
 .loginbox {
   border-radius: 3px;
@@ -18370,6 +18388,30 @@ fieldset[disabled] #page-site-index .section-modchooser-link .section-modchooser
 .snap-media-object .snap-unread-marker {
   color: #FF9800;
 }
+
+@media screen and (min-width: 768px) {
+  #course_teachers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .snap-media-object{
+    margin: 14px;
+    min-width: 300px;
+    max-width: 300px;
+    display: inline-block;
+  }
+  .snap-media-object > img{
+    width: 64px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+  }
+  .snap-media-object .snap-media-body a{
+    display: block;
+    text-align: center;
+  }
+}
 @media screen and (min-width: 480px) {
   #moodle-footer .list-unstyled {
     -webkit-column-count: 2;
@@ -18527,7 +18569,7 @@ aside {
   position: relative;
 }
 
-#page-my-index{  /* sebasz */
+#page-my-index, #page-user-profile {  /* sebasz */
   background-color: #eeeeee;
 }
  #region-main, #moodle-blocks{ /* sebasz  modify with context if required */
@@ -18535,7 +18577,7 @@ aside {
   
 }
 
-#page-my-index #block-region-content, #moodle-blocks .block{ /* sebasz  dashboard*/
+#page-my-index #block-region-content, #moodle-blocks .block, .userprofile .profile_tree section{ /* sebasz  dashboard*/
       background-color: white;
     box-shadow: #dadada 0px 1px 1px;
     padding: 18px 24px 32px 24px;
@@ -21745,6 +21787,9 @@ section#region-main
   position: relative;
   top:-39px;
 
+}
+#page-user-profile .singlebutton{
+  top: -20px;
 }
 .format-topics #page-mast .singlebutton,
 .format-weeks #page-mast .singlebutton {

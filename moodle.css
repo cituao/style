@@ -2144,17 +2144,37 @@ img.iconsmall {
   vertical-align: top;
   padding: 0;
 }
-.path-calendar .maincalendar .bottom {
+.path-calendar .maincalendar .bottom {/*sebasz calendar*/
   text-align: center;
-  padding: 5px 0 0 0;
+  padding: 50px 10px 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.path-calendar .maincalendar .bottom a{/*sebasz calendar*/
+  padding: 0 8px;
 }
 .path-calendar .maincalendar .heightcontainer {
   height: 100%;
   position: relative;
 }
-.path-calendar .maincalendar .calendarmonth {
+.path-calendar .maincalendar .calendarmonth { /*sebasz calendar*/
   width: 98%;
-  margin: 10px auto;
+  margin: 0px auto;
+  background-color: white;
+  box-shadow: #dadada 0px 1px 1px;
+  padding: 18px 24px 32px 24px;
+  border: #e6e6e6 1px solid;
+  margin-bottom: 0px;
+  max-width: none;
+}
+#page-calendar-view #moodle-blocks  .block_fake::first-child{
+  background-color: #e2e2e2;
+  border: none;
+  box-shadow: none;
+}
+.path-calendar .maincalendar .calendarmonth thead { /*sebasz calendar*/
+padding:20px 0;
 }
 .path-calendar .maincalendar .calendarmonth ul {
   margin: 0;
@@ -2173,9 +2193,19 @@ img.iconsmall {
 .path-calendar .maincalendar .calendar-controls .current {
   width: 39.95%;
 }
-.path-calendar .maincalendar .controls {
+.path-calendar .maincalendar .controls { /*sebasz calendar*/
   width: 98%;
   margin: 10px auto;
+  margin-bottom: 0;
+  background-color: #292929;
+  padding: 10px 32px 0px 32px;
+}
+.path-calendar .maincalendar .controls .calendar-controls h2 { /*sebasz calendar*/
+  color: white !important;
+}
+.path-calendar .maincalendar .controls .calendar-controls a { /*sebasz calendar*/
+  color: #dcdcdc !important;
+  margin-top: 30px;
 }
 .path-calendar .maincalendar .eventlist .event {
   width: 100%;
@@ -4411,6 +4441,7 @@ table.message .searchresults td {
 .message .contactselector {
   width: 24%;
   float: left;
+  
 }
 .message .contactselector .contact {
   text-align: left;
@@ -18569,7 +18600,7 @@ aside {
   position: relative;
 }
 
-#page-my-index, #page-user-profile {  /* sebasz */
+#page-my-index, #page-user-profile, #page-calendar-view, #page-grade-report-overview-index, #page-message-index {  /* sebasz backgrounds color*/
   background-color: #eeeeee;
 }
  #region-main, #moodle-blocks{ /* sebasz  modify with context if required */
@@ -18577,7 +18608,7 @@ aside {
   
 }
 
-#page-my-index #block-region-content, #moodle-blocks .block, .userprofile .profile_tree section{ /* sebasz  dashboard*/
+#page-my-index #block-region-content, #moodle-blocks .block, .userprofile .profile_tree section, #page-message-index .message .contactselector{ /* sebasz  dashboard*/
       background-color: white;
     box-shadow: #dadada 0px 1px 1px;
     padding: 18px 24px 32px 24px;
@@ -19561,8 +19592,11 @@ li.calendar_event_user:before {
   border: 1px solid #fff;
   margin: 0 auto;
 }
-.maincalendar .today .day {
-  border-color: #dadada;
+.maincalendar .today .day { /*sebasz calendar */
+  border-color: none;
+  font-weight: bold;
+  background-color: #e21936;
+  color: white;
 }
 .maincalendar .day .day a {
   border-radius: 100%;
@@ -19720,9 +19754,23 @@ ul.events-new + ul.events-underway {
   text-align: center;
 }
 /* Message contaacts list */
-.message-contacts {
+.message-contacts { /* sebasz message */
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.message-contacts li div.pix a img { /* sebasz message */
+  width: 40px;
+}
+.message-contacts li{ /* sebasz */
+  list-style: none;
+  margin: 6px 0px;
+}
+#message_participants{
+  padding-top: 10px;
+  margin-top: 10px;
 }
 .message-contacts .pix,
 .message-contacts .link,

@@ -106,7 +106,7 @@ a.autolink.glossary:hover {
 }
 .collapsible-actions {
   display: none;
-  text-align: right;
+ /* text-align: right; sebasz */
 }
 .jsenabled .collapsible-actions {
   display: block;
@@ -2908,9 +2908,11 @@ span.editinstructions {
 .coursebox .enrolmenticons {
   float: right;
 }
-.coursebox .moreinfo {
+.coursebox .moreinfo { /* sebasz */
   padding: 3px 0;
-  float: right;
+  float: left !important;
+  line-height: 1.8em;
+  margin-right: 8px;
 }
 .coursebox .enrolmenticons img,
 .coursebox .moreinfo img {
@@ -2929,7 +2931,8 @@ span.editinstructions {
 }
 .coursebox .content .courseimage img {
   max-width: 100px;
-  max-height: 100px;
+  max-height: 200px;
+  margin: 12px 0;
 }
 .coursebox .content .coursecat,
 .coursebox .content .summary,
@@ -2949,6 +2952,7 @@ span.editinstructions {
 .courses .coursebox.collapsed {
   border: 1px solid #eeeeee;
   padding: 5px;
+  margin: 10px 0;
 }
 .course_category_tree .category .numberofcourse {
   font-size: 13px;
@@ -7956,7 +7960,7 @@ th {
   margin-bottom: 28px;
 }
 .message_heading{ /* sebasz */
-  text-align: right !important;
+  font-size: 1.1em;
 }
 .table > thead > tr > th,
 .table > tbody > tr > th,
@@ -18421,7 +18425,8 @@ fieldset[disabled] #page-site-index .section-modchooser-link .section-modchooser
   color: inherit;
   opacity: 0.9;
 }
-.snap-media-object .snap-media-meta {
+.snap-media-object .snap-media-meta { /*sebasz*/
+  text-align: center;
   display: block;
   font-size: small;
   color: #999;
@@ -18610,7 +18615,7 @@ aside {
   position: relative;
 }
 
-#page-my-index, #page-user-profile, #page-calendar-view, #page-grade-report-overview-index, #page-message-index {  /* sebasz backgrounds color*/
+#page-my-index, #page-user-profile, #page-calendar-view, #page-grade-report-overview-index, #page-message-index, #page-course-index {  /* sebasz backgrounds color*/
   background-color: #eeeeee;
 }
  #region-main, #moodle-blocks{ /* sebasz  modify with context if required */
@@ -18618,7 +18623,7 @@ aside {
   
 }
 
-#page-my-index #block-region-content, #moodle-blocks .block, .userprofile .profile_tree section, #page-message-index .message .contactselector{ /* sebasz  dashboard*/
+#page-my-index #block-region-content, #moodle-blocks .block, .userprofile .profile_tree section, #page-message-index .message .contactselector, #page-course-index section#region-main div[role=main]{ /* sebasz  dashboard*/
       background-color: white;
     box-shadow: #dadada 0px 1px 1px;
     padding: 18px 24px 32px 24px;
@@ -18724,6 +18729,9 @@ header#page-header
 				search stuff SHAME
 
  ****************************/
+#page-course-user #page-mast h1{ /*sebasz*/
+  color: white !important;
+}
 #course-toc {
   padding: 0 0 1em;
   max-width: 100%;
@@ -19461,8 +19469,9 @@ http://blog.rodneyrehm.de/archives/34-iOS7-Mobile-Safari-And-Viewport-Units.html
   padding: 1em 4%;
   border-bottom: 1px solid #eee;
 }
-.coursebox .info .coursename {
-  font-size: 36px;
+.coursebox .info .coursename { /* sebasz */
+  font-size: 22px;
+  display: inline-block;
 }
 .coursebox .enrolmenticons,
 .coursebox .moreinfo {

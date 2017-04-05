@@ -4400,9 +4400,10 @@ a.ygtvspacer:hover {
 .message .link {
   font-size: 13px;
 }
-.message .heading {
+.message .heading { /*sebasz*/
   font-size: 1em;
   font-weight: bold;
+  margin: 5px 0;
 }
 .message .author {
   font-weight: bold;
@@ -13035,7 +13036,6 @@ img.hide {
 .block_online_users .content .info{
   
   font-size: 14px;
-  margin-top: -18px;
   margin-bottom: 6px;
   text-align: left;
 }
@@ -13362,6 +13362,7 @@ input[type="checkbox"] {
 .singleselect {
   display: inline-block;
 }
+
 .singleselect form,
 .singleselect select {
   margin: 0;
@@ -18349,15 +18350,17 @@ fieldset[disabled] #page-site-index .section-modchooser-link .section-modchooser
 #page-login-index, #page-login-index #page { /* sebasz */
   background-color: #eeeeee !important;
 }
-#snap-home.logo {
+#snap-home.logo { /*sebasz*/
   display: inline-block;
+  position: relative;
   background-color: transparent;
   background-repeat: no-repeat;
-  height: 38px;
+  height: 42px;
   width: 38%;
   -webkit-background-size: contain;
           background-size: contain;
   margin: -0.75em 0;
+  top:5px;
 }
 @media screen and (max-width: 991px) {
   #snap-home.logo {
@@ -18546,14 +18549,17 @@ footer #moodle-footer
     padding-right: 15px;
   }
 }
-#mr-nav {
+#mr-nav { /*sebasz*/
   position: fixed;
   width: 100%;
   z-index: 23;
   line-height: 2;
-  padding: 0.5em 0 0.5em 4%;
-  background-color: rgba(255, 255, 255, 0.95);
+  padding: 0.5em 3% 0.5em 4%;
+  background-color: rgba(45, 42, 42, 0.95);
 }
+#mr-nav a#fixy-trigger{
+  color: white;
+} 
 #mr-nav.headroom--unpinned {
   will-change: transform;
   -webkit-animation-name: snap-rise;
@@ -18648,7 +18654,7 @@ aside {
   padding: 0;
   padding-bottom: 20px;
   margin-top: 0;
-  background-color: #FFC246;
+  background-color: #ffe0a1;
   
 }
 
@@ -18702,7 +18708,7 @@ header#page-header
 .breadcrumb-nav {
   margin-bottom: 0;
   float: none;
-  margin-top: -0.5em;
+
 }
 .breadcrumb {
   background-color: transparent;
@@ -19793,6 +19799,7 @@ ul.events-new + ul.events-underway {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-left: 28px;
 }
 .message-contacts li div.pix a img { /* sebasz message */
   width: 40px;
@@ -21497,8 +21504,9 @@ div.editor_atto_toolbar div.atto_group {
   border: none;
   background: #fff;
 }
-#page-message-index div.singleselect {
+#page-message-index div.singleselect { /*sebasz*/
   max-width: 100%;
+  text-align: left;
 }
 #page-admin-setting-themesettingsnap {
   /* Subtitle textarea. */
@@ -23737,6 +23745,9 @@ table.searchbox tr{
   text-align: right;
   position: relative;
   /* top:-7px; */
+}
+.real-user-info{ /* sebasz */
+  color: #de9191;
 }
 #fixy-user #fixy-logout { /* sebasz */
   display: block;
